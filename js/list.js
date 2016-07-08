@@ -50,4 +50,23 @@ function handleSubmit() {
         });
 }
 
+function handleRemove(id) {
+
+    //var id = {
+    //    id: document.user.id.value
+    //};
+    fetch("http://localhost:8080/students/"+id,
+        {
+            method: "DELETE",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then(function () {
+            var qs = document.querySelector(".list");
+            qs.removeChild(qs.lastElementChild);
+            drawUserList();
+        });
+}
+
 drawUserList();

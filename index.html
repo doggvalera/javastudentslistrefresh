@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -12,6 +12,7 @@
 <input type="text" name="firstname">
 <input type="text" name="surname">
 </form>
+
 <div class="list">
 
 </div>
@@ -28,8 +29,10 @@
 
 <script id="user" type="text/x-handlebars-template">
     <div class="user">
-        {{name}} {{surname}} {{listAssignment}}
+        {{name}} {{surname}} {{id}} {{listAssignment}}
+                                        <button name="userem" onclick="handleRemove({{id}})">X</button>
     </div>
+
 </script>
 
 <script>
